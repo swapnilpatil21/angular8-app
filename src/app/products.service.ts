@@ -16,4 +16,21 @@ export class ProductsService {
            .get(`${this.uri}.json`);
   }  
 
+  editProduct(id) {  
+    return this
+            .http
+            .get(`${this.uri}/${id}.json`);  
+  }
+
+  updateProductService(name, description, price, id) {  
+    const obj = {
+        name,
+        description,
+        price
+    };
+    this  
+      .http 
+      .patch(`${this.uri}/${id}.json`, obj)
+      .subscribe(res => console.log('Done................'));
+  }
 }
