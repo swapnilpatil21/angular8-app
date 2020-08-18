@@ -33,4 +33,11 @@ export class ProductsService {
       .patch(`${this.uri}/${id}.json`, obj)
       .subscribe(res => console.log('Done................'));
   }
+
+  deleteProduct(id) {  
+    return this
+            .http
+            .delete(`${this.uri}/${id}.json`);  
+  }
+
 }
