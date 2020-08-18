@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { ProductGetComponent } from './product-get/product-get.component';
 import { ProductsService } from './products.service';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductAddComponent } from './product-add/product-add.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductGetComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    ProductAddComponent
   ],
   imports: [
     BrowserModule,

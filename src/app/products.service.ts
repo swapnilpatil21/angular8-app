@@ -16,6 +16,16 @@ export class ProductsService {
            .get(`${this.uri}.json`);
   }  
 
+  addProduct(name, description, price) {  
+    const obj = {  
+      name,
+      description,
+      price
+    };
+    this.http.post(`${this.uri}.json`, obj)
+        .subscribe(res => console.log('Added new product..'));  
+  }
+
   editProduct(id) {  
     return this
             .http
